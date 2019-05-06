@@ -18,7 +18,6 @@ module.exports.register = async (container) => {
 
         //inject container into request
         app.use((req, res, next) => {
-            console.log('huy',req.container);
             req.container = container;
             next();
         });
